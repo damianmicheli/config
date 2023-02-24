@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: api-customer
+  jpa:
+    hibernate.ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://${MYSQL_HOST:localhost}:3306/${MYSQL_DB:billetera_virtual}
+    username: ${MYSQL_USR:grupo2}
+    password: ${MYSQL_PWD:BEgrupo2}
 
 eureka:
   client:
